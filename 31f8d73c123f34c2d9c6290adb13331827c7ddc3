@@ -1,0 +1,2 @@
+- bad quota-version autodetect, fixed. (detects now v1 instead of v2)
+- this make it works for 2.2.20 & 2.4.17 pld kernel
