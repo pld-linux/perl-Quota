@@ -39,7 +39,7 @@ quotactl wymaga jako parametru) odpowiadaj±cych im systemów plików.
 %patch0 -p0
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 # test is interactive
