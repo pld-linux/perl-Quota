@@ -1,6 +1,7 @@
 #
 # Conditional build:
 %bcond_with	tests	# perform "make test"
+			# interactive
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Quota
@@ -10,7 +11,8 @@ Summary(pl):	Quota - perlowy interfejs do quot systemów plików
 Name:		perl-Quota
 Version:	1.4.10
 Release:	1
-License:	GPL
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
 # Source0-md5:	5b95b794822118dd7501d003f4277c45
@@ -42,7 +44,8 @@ quotactl wymaga jako parametru) odpowiadaj±cych im systemów plików.
 %build
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
-%{__make} OPTIMIZE="%{rpmcflags}"
+%{__make} \
+	OPTIMIZE="%{rpmcflags}"
 
 # test is interactive
 %{?with_tests:%{__make} test}
@@ -51,8 +54,8 @@ quotactl wymaga jako parametru) odpowiadaj±cych im systemów plików.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
-
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 cp -af contrib/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
