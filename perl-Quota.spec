@@ -6,7 +6,7 @@ Version:	1.4.1
 Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Quota/Quota-%{version}.tar.gz
+Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/Quota/Quota-%{version}.tar.gz
 Patch0:		%{name}-paths.patch
 Patch1:		%{name}-vers.patch
 BuildRequires:	rpm-perlprov >= 3.0.3-16
