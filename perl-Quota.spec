@@ -1,23 +1,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Quota
 %define		pnam	Quota
-Summary:	Quota Perl module
-Summary(cs):	Modul Quota pro Perl
-Summary(da):	Perlmodul Quota
-Summary(de):	Quota Perl Modul
-Summary(es):	Módulo de Perl Quota
-Summary(fr):	Module Perl Quota
-Summary(it):	Modulo di Perl Quota
-Summary(ja):	Quota Perl ¥â¥¸¥å¡¼¥ë
-Summary(ko):	Quota ÆÞ ¸ðÁÙ
-Summary(no):	Perlmodul Quota
-Summary(pl):	Modu³ perla Quota
-Summary(pt_BR):	Módulo Perl Quota
-Summary(pt):	Módulo de Perl Quota
-Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl Quota
-Summary(sv):	Quota Perlmodul
-Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl Quota
-Summary(zh_CN):	Quota Perl Ä£¿é
+Summary:	Quota - Perl interface to file system quotas
 Name:		perl-Quota
 Version:	1.4.4
 Release:	2
@@ -30,10 +14,12 @@ BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Quota perl module.
-
-%description -l pl
-Modu³ perla Quota.
+The B<Quota> module provides access to file system quotas.  The quotactl
+system call or ioctl is used to query or set quotas on the local host,
+or queries are submitted via RPC to a remote host.  Mount tables can
+be parsed with B<getmntent> and paths can be translated to device files
+(or whatever the actual B<quotactl> implementations needs as argument)
+of the according file system.
 
 %prep
 %setup -q -n %{pnam}-%{version}
