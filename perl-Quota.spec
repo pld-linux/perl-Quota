@@ -8,12 +8,12 @@
 Summary:	Quota - Perl interface to file system quotas
 Summary(pl):	Quota - perlowy interfejs do quot systemów plików
 Name:		perl-Quota
-Version:	1.4.9
+Version:	1.4.10
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
-# Source0-md5:	2a4e0144862148697128f9eb158d1861
+# Source0-md5:	5b95b794822118dd7501d003f4277c45
 Patch0:		%{name}-paths.patch
 BuildRequires:	perl-devel >= 5.6.1
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -61,11 +61,11 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc CHANGES README
-%{perl_vendorarch}/Quota.pm
-%dir %{perl_vendorarch}/auto/Quota
-%{perl_vendorarch}/auto/Quota/autosplit.ix
-%{perl_vendorarch}/auto/Quota/Quota.bs
-%attr(755,root,root) %{perl_vendorarch}/auto/Quota/Quota.so
+%{perl_vendorarch}/%{pdir}.pm
+%dir %{perl_vendorarch}/auto/%{pdir}
+%{perl_vendorarch}/auto/%{pdir}/autosplit.ix
+%{perl_vendorarch}/auto/%{pdir}/%{pdir}.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/%{pdir}/%{pdir}.so
 %{_mandir}/man3/*
 %dir %{_examplesdir}/%{name}-%{version}
 %{_examplesdir}/%{name}-%{version}/[Rqr]*
