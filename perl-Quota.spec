@@ -8,15 +8,15 @@
 Summary:	Quota - Perl interface to file system quotas
 Summary(pl):	Quota - perlowy interfejs do quot systemów plików
 Name:		perl-Quota
-Version:	1.4.6
+Version:	1.4.8
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
-# Source0-md5:	ae003bfc39148f15e16c4d5b5d4d2c00
+# Source0-md5:	d4b4e592f900c0cdd6bb20628fe473ec
 Patch0:		%{name}-paths.patch
 BuildRequires:	perl-devel >= 5.6.1
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -40,7 +40,8 @@ quotactl wymaga jako parametru) odpowiadaj±cych im systemów plików.
 %patch0 -p0
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 # test is interactive
@@ -60,11 +61,11 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc CHANGES README
-%{perl_sitearch}/Quota.pm
-%dir %{perl_sitearch}/auto/Quota
-%{perl_sitearch}/auto/Quota/autosplit.ix
-%{perl_sitearch}/auto/Quota/Quota.bs
-%attr(755,root,root) %{perl_sitearch}/auto/Quota/Quota.so
+%{perl_vendorarch}/Quota.pm
+%dir %{perl_vendorarch}/auto/Quota
+%{perl_vendorarch}/auto/Quota/autosplit.ix
+%{perl_vendorarch}/auto/Quota/Quota.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/Quota/Quota.so
 %{_mandir}/man3/*
 %dir %{_examplesdir}/%{name}-%{version}
 %{_examplesdir}/%{name}-%{version}/[Rqr]*
