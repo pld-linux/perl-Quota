@@ -1,0 +1,16 @@
+--- contrib.paths/quotamgmt/quotamgmt	Thu Mar 13 17:04:22 1997
++++ contrib/quotamgmt/quotamgmt	Mon Oct 18 00:16:45 1999
+@@ -1,4 +1,4 @@
+-#!/usr/drwho/local/bin/perl -w
++#!/usr/bin/perl -w
+ use Quota;
+ select(STDERR); $|=1;
+ select(STDOUT);$|=1;
+--- contrib.paths/report-quota	Fri Aug 29 04:13:31 1997
++++ contrib/report-quota	Mon Oct 18 00:16:59 1999
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl
++#!/usr/bin/perl
+ 
+ # Report Quota
+ # 
