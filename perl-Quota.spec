@@ -10,13 +10,14 @@ Summary:	Quota - Perl interface to file system quotas
 Summary(pl):	Quota - perlowy interfejs do quot systemów plików
 Name:		perl-Quota
 Version:	1.4.10
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
 # Source0-md5:	5b95b794822118dd7501d003f4277c45
 Patch0:		%{name}-paths.patch
+Patch1:		%{name}-pic.patch
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -40,6 +41,7 @@ quotactl wymaga jako parametru) odpowiadaj±cych im systemów plików.
 %prep
 %setup -q -n %{pnam}-%{version}
 %patch0 -p0
+%patch1 -p1
 
 %build
 %{__perl} Makefile.PL \
