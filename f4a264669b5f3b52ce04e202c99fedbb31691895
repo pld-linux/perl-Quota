@@ -1,0 +1,2 @@
+- added '%%include /usr/lib/rpm/macros.perl'
+- modified BuildRequires rules
