@@ -3,11 +3,12 @@ Summary:	Quota perl module
 Summary(pl):	Modu³ perla Quota
 Name:		perl-Quota
 Version:	1.4.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Quota/Quota-%{version}.tar.gz
 Patch0:		%{name}-paths.patch
+Patch1:		%{name}-vers.patch
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -20,7 +21,8 @@ Modu³ perla Quota.
 
 %prep
 %setup -q -n Quota-%{version}
-%patch -p0
+%patch0 -p0
+%patch1 -p1
 
 %build
 perl Makefile.PL
