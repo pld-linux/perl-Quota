@@ -4,7 +4,7 @@
 Summary:	Quota - Perl interface to file system quotas
 Name:		perl-Quota
 Version:	1.4.4
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
