@@ -2,7 +2,7 @@
 Summary:	Quota perl module
 Summary(pl):	Modu³ perla Quota
 Name:		perl-Quota
-Version:	1.3.3
+Version:	1.3.4
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
