@@ -4,8 +4,8 @@
 			# interactive
 #
 %include	/usr/lib/rpm/macros.perl
-%define		pdir	Quota
-%define		pnam	Quota
+%define	pdir	Quota
+%define	pnam	Quota
 Summary:	Quota - Perl interface to file system quotas
 Summary(pl):	Quota - perlowy interfejs do quot systemów plików
 Name:		perl-Quota
