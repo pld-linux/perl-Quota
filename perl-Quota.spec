@@ -7,7 +7,7 @@
 %define		pdir	Quota
 %define		pnam	Quota
 Summary:	Quota - Perl interface to file system quotas
-Summary(pl):	Quota - perlowy interfejs do quot systemów plików
+Summary(pl.UTF-8):   Quota - perlowy interfejs do quot systemÃ³w plikÃ³w
 Name:		perl-Quota
 Version:	1.5.1
 Release:	1
@@ -30,13 +30,13 @@ be parsed with getmntent and paths can be translated to device files
 (or whatever the actual quotactl implementations needs as argument)
 of the according file system.
 
-%description -l pl
-Modu³ Quota daje dostêp do quot systemów plików. U¿ywa wywo³añ
+%description -l pl.UTF-8
+ModuÅ‚ Quota daje dostÄ™p do quot systemÃ³w plikÃ³w. UÅ¼ywa wywoÅ‚aÅ„
 systemowych quotactl lub ioctl do sprawdzania lub ustawiania quot
-lokalnych lub przesy³a zapytania po RPC do zdalnej maszyny. Tablice
-montowanych partycji mog± byæ analizowane poprzez getmntent, a ¶cie¿ki
-t³umaczone na pliki urz±dzeñ (lub cokolwiek, czego dana implementacja
-quotactl wymaga jako parametru) odpowiadaj±cych im systemów plików.
+lokalnych lub przesyÅ‚a zapytania po RPC do zdalnej maszyny. Tablice
+montowanych partycji mogÄ… byÄ‡ analizowane poprzez getmntent, a Å›cieÅ¼ki
+tÅ‚umaczone na pliki urzÄ…dzeÅ„ (lub cokolwiek, czego dana implementacja
+quotactl wymaga jako parametru) odpowiadajÄ…cych im systemÃ³w plikÃ³w.
 
 %prep
 %setup -q -n %{pnam}-%{version}
