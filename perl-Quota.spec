@@ -7,7 +7,7 @@
 %define		pdir	Quota
 %define		pnam	Quota
 Summary:	Quota - Perl interface to file system quotas
-Summary(pl.UTF-8):   Quota - perlowy interfejs do quot systemów plików
+Summary(pl.UTF-8):	Quota - perlowy interfejs do quot systemów plików
 Name:		perl-Quota
 Version:	1.5.1
 Release:	1
