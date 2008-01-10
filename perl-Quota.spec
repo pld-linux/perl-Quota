@@ -47,6 +47,7 @@ quotactl wymaga jako parametru) odpowiadających im systemów plików.
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 %{__make} \
+	CC="%{__cc}" \
 	OPTIMIZE="%{rpmcflags}"
 
 # test is interactive
