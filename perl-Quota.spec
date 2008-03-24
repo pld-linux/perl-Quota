@@ -14,10 +14,11 @@ Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Quota/%{pnam}-%{version}.tar.gz
 # Source0-md5:	6a4887f5aadf34e8d49d067cc78d579a
 Patch0:		%{name}-paths.patch
 Patch1:		%{name}-pic.patch
+URL:		http://search.cpan.org/dist/Quota/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -67,11 +68,11 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc CHANGES README
-%{perl_vendorarch}/%{pdir}.pm
-%dir %{perl_vendorarch}/auto/%{pdir}
-%{perl_vendorarch}/auto/%{pdir}/autosplit.ix
-%{perl_vendorarch}/auto/%{pdir}/%{pdir}.bs
-%attr(755,root,root) %{perl_vendorarch}/auto/%{pdir}/%{pdir}.so
+%{perl_vendorarch}/Quota.pm
+%dir %{perl_vendorarch}/auto/Quota
+%{perl_vendorarch}/auto/Quota/autosplit.ix
+%{perl_vendorarch}/auto/Quota/Quota.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/Quota/Quota.so
 %{_mandir}/man3/*
 %dir %{_examplesdir}/%{name}-%{version}
 %{_examplesdir}/%{name}-%{version}/[Rqr]*
