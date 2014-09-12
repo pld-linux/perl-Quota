@@ -71,7 +71,6 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/Quota.pm
 %dir %{perl_vendorarch}/auto/Quota
 %{perl_vendorarch}/auto/Quota/autosplit.ix
-%{perl_vendorarch}/auto/Quota/Quota.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Quota/Quota.so
 %{_mandir}/man3/*
 %dir %{_examplesdir}/%{name}-%{version}
