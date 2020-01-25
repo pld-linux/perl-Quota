@@ -3,7 +3,6 @@
 %bcond_with	tests	# perform "make test"
 			# interactive
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Quota
 %define		pnam	Quota
 Summary:	Quota - Perl interface to file system quotas
