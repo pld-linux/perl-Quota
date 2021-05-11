@@ -8,16 +8,17 @@
 Summary:	Quota - Perl interface to file system quotas
 Summary(pl.UTF-8):	Quota - perlowy interfejs do quot systemów plików
 Name:		perl-Quota
-Version:	1.7.2
-Release:	5
+Version:	1.8.1
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Quota/%{pnam}-%{version}.tar.gz
-# Source0-md5:	d4ed0acc56ece4e5080a7a6d827e9c66
+# Source0-md5:	ce32e518e915d9549e0952d0f82a79d0
 Patch0:		%{name}-paths.patch
 Patch1:		%{name}-pic.patch
 URL:		http://search.cpan.org/dist/Quota/
+BuildRequires:	libtirpc-devel
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
